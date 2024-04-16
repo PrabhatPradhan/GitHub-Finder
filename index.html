@@ -4,88 +4,47 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <style>
-      .main {
-        background-color: #ededed;
-        border: 1px solid black;
-        width: 30rem;
-        height: 2.5rem;
-        padding-top: 0.5rem;
-        padding-bottom: 0.5rem;
-        padding-left: 0.5rem;
-        padding-right: 0.5rem;
-        border-radius: 1rem;
-      }
-      .pra {
-        background-color: #ededed;
-        margin-top: 2rem;
-        border: 1px solid black;
-        width: 30rem;
-        height: 3rem;
-        padding: 1.5rem 0rem 0.5rem 1rem;
-        border-radius: 1rem;
-      }
-      h1 {
-        margin-left: 24rem;
-      }
-      #btn1 {
-        border: none;
-        height: 2rem;
-        background-color: rgb(225, 215, 215);
-      }
-      input {
-        background-color: #ededed;
-        width: 23rem;
-        height: 2rem;
-        border: none;
-      }
-      #btn2 {
-        background-color: black;
-        color: aliceblue;
-        height: 2rem;
-        width: 4rem;
-        border-radius: 0.5rem;
-      }
-      .mm {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-      }
-      img{
-        height: 4rem;
-        width: 5rem;
-      }
-    </style>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link rel="stylesheet" href="./style.css">
   </head>
   <body>
     <h1>GitHub</h1>
     <div class="mm">
       <div class="main">
-        <button id="btn1">O</button>
+        <span class="material-symbols-outlined"> search </span>
         <input type="text" id="inputtext" placeholder="search" />
         <button id="btn2">Search</button>
-        <div class="pra">Please enter your Github username
+        <!-- <div class="pra">Please enter your Github username
             
-        </div>
+        </div> -->
       </div>
     </div>
 
-    <img src="" alt="" id="img-1" />
-
-
-    <script>
-      async function fetchData() {
-        let inputText = document.getElementById("inputtext").value;
-        let response = await fetch(`https://api.github.com/users/${inputText}`);
-        let data = await response.json();
-        console.log(data);
-        const img1 = document
-          .querySelector("img")
-          .setAttribute("src", data.avatar_url);
-      }
-      document.getElementById("btn2").addEventListener("click", fetchData);
-    </script>
+    <div class="main-parent">
+      <main id="main-2">
+        <div class="div-2">
+          <img src="" alt="" id="img-1" />
+          <div class="div-3">
+            <div class="title-1">
+              <span id="name"></span>
+              <a href="" id="name-2"></a>
+            </div>
+            <div>
+              <span id="date"></span>
+            </div>
+          </div>
+        </div>
+        <div class="main-3" id="followers-tab"></div>
+        <div id="footer"></div>
+      </main>
+    </div>
+<script src="./script.js"></script>
   </body>
 </html>
+
+
+
 
